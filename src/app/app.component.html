@@ -1,0 +1,16 @@
+<a href="https://material.angular.io/components/dialog/examples">Doc 📃</a>
+<br>
+<button class="button-open" mat-raised-button color="warn" (click)="open()" >Open Modal</button>
+
+<mat-form-field class="select" appearance="fill">
+  <mat-label>Select number</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let number of numbers" [value]="number">{{number}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
